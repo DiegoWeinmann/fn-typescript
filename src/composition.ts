@@ -10,7 +10,6 @@ const composeMany = <T>(...functions: Array<(arg: T) => T>) => (arg: any) =>
 
 const trimAndCapitalize = compose(trim, capitalize);
 
-
 console.log(trimAndCapitalize(testString));
 
 console.log(composeMany(trim, capitalize, replace('D', 'd'))(testString));
